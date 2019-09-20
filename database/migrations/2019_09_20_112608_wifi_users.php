@@ -15,9 +15,15 @@ class WifiUsers extends Migration
     {
         Schema::create('wifi_users', function (Blueprint $table) {
             $table->bigIncrements('id');
+
             $table->string('firstname');
             $table->string('lastname');
-            $table->string('email');
+            $table->string('email')->required();
+            $table->integer('msisdn')->required();
+
+            $table->boolean('consent1')->required();
+            $table->boolean('consent2')->required();
+
             $table->timestamps();
         });
     }

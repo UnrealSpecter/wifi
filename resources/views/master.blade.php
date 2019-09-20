@@ -40,11 +40,11 @@
                 <!-- ACCEPT TERMS -->
                 <div class="flex flex-col w-full">
                     <div class="checkbox-wrapper flex flex-row justify-between items-center text-red-600">
-                        <input checked="checked" name="terms" type="checkbox" value="terms">
+                        <input checked="checked" name="consent1" type="checkbox" value=1>
                         <span>accept terms</span>
                     </div>
                     <div class="checkbox-wrapper flex flex-row justify-between items-center text-red-600">
-                        <input checked="checked" name="email_list" type="checkbox" value="email_list">
+                        <input checked="checked" name="consent2" type="checkbox" value=1>
                         <span>email list</span>
                     </div>
                 </div>
