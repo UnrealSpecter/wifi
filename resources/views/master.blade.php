@@ -15,11 +15,11 @@
             <div class="w-11/12 flex-shrink white overflow-hidden flex flex-row bg-white laptop:bg-transparent laptop:shadow-none justify-center laptop:p-0 laptop:justify-between my-5 rounded-lg shadow-lg tablet-landscape:p-0">
 
                 <!-- LOGO -->
-                <img src="{{ asset('/assets/logo.png') }}" class="p-5 laptop:h-20 laptop:w-1/4 tablet-portrait:w-full tablet-portrait:p-5 tablet-portrait:h-24 tablet-landscape:h-24 desktop:shadow-md desktop:w-1/4 desktop:p-5 desktop:m-5 laptop:p-5 bg-white z-20 animated fadeIn z-10 p-0 tablet-portrait:px-10 object-contain overflow-hidden rounded-lg">
+                <img src="{{ asset('/assets/logo.png') }}" class="animated fadeIn delay-1s p-5 laptop:h-20 laptop:w-1/4 tablet-portrait:w-full tablet-portrait:p-5 tablet-portrait:h-24 tablet-landscape:h-24 desktop:shadow-md desktop:w-1/4 desktop:p-5 desktop:m-5 laptop:p-5 bg-white z-20 animated fadeIn z-10 p-0 tablet-portrait:px-10 object-contain overflow-hidden rounded-lg">
 
                 <!-- WEATHER INFORMATION -->
-                <div id="weather-information" class="desktop:p-10 desktop:m-5 laptop:px-10 hidden laptop:h-20 laptop:flex tablet-landscape:flex-row tablet-landscape:justify-center tablet-landscape:items-center rounded-lg z-20 shadow-lg animated fadeIn m-10 laptop:m-0 bg-white p-5 text-1rem text-red-500 raleway tracking-2px leading-none">
-                    weather information here.
+                <div id="weather-information" class="animated fadeIn delay-1s text-setservices-blue desktop:p-10 desktop:m-5 laptop:px-10 hidden laptop:h-20 laptop:flex tablet-landscape:flex-row tablet-landscape:justify-center tablet-landscape:items-center rounded-lg z-20 shadow-lg animated fadeIn m-10 laptop:m-0 bg-white p-5 text-1rem raleway tracking-2px leading-none">
+                    weather information
                 </div>
 
             </div>
@@ -30,35 +30,45 @@
                 {{ csrf_field() }}
 
                 <!-- TITLE -->
-                <h1 class="text-2rem tablet-portrait:text-4rem tablet-landscape:text-3rem dekstop:text-4rem text-red-600 raleway px-5 mb-5">connect wifi</h1>
+                <div class="delay-1s animated fadeIn w-full flex flex-row justify-center items-center mb-5">
+                    <h1 class="whitespace-no-wrap text-setservices-blue text-2rem tablet-portrait:text-4rem tablet-landscape:text-3rem laptop:text-2.5rem desktop:text-4rem raleway px-5">connect wifi</h1>
+                    <img src="{{ asset('/assets/wifi.svg') }}" class="w-12 tablet-portrait:w-20 laptop:w-12 h-full mr-2" alt="wifi-icon">
+                </div>
 
                 <!-- FIRSTNAME, LASTNAME, EMAIL. -->
-                <input class="outline-none shadow-md rounded-lg w-full h-16 tablet-landscape:h-12 p-5 tablet-landscape:p-8 text-1.25rem tablet-portrait:text-1.5rem desktop:text-1.5rem text-red-600" type="text" placeholder="first name" name="firstname"><br>
-                <input class="outline-none shadow-md rounded-lg w-full h-16 tablet-landscape:h-12 p-5 tablet-landscape:p-8 text-1.25rem tablet-portrait:text-1.5rem desktop:text-1.5rem text-red-500" type="text" placeholder="last name" name="lastname"><br>
-                <input class="outline-none shadow-md rounded-lg w-full h-16 tablet-landscape:h-12 p-5 tablet-landscape:p-8 text-1.25rem tablet-portrait:text-1.5rem desktop:text-1.5rem text-red-500" type="email" placeholder="email" name="email" required><br>
+                <input class="delay-1s animated fadeIn text-setservices-blue outline-none shadow-md rounded-lg w-full h-16 tablet-landscape:h-12 p-5 tablet-landscape:p-8 text-1.25rem tablet-portrait:text-1.5rem desktop:text-1.5rem text-red-600" type="text" placeholder="first name" name="firstname"><br>
+                <input class="delay-1s animated fadeIn text-setservices-blue outline-none shadow-md rounded-lg w-full h-16 tablet-landscape:h-12 p-5 tablet-landscape:p-8 text-1.25rem tablet-portrait:text-1.5rem desktop:text-1.5rem text-red-500" type="text" placeholder="last name" name="lastname"><br>
+                <input class="delay-1s animated fadeIn text-setservices-blue outline-none shadow-md rounded-lg w-full h-16 tablet-landscape:h-12 p-5 tablet-landscape:p-8 text-1.25rem tablet-portrait:text-1.5rem desktop:text-1.5rem text-red-500" type="email" placeholder="email" name="email" required><br>
 
                 <!-- ACCEPT TERMS -->
-                <div class="flex flex-col w-full">
-                    <div class="checkbox-wrapper flex flex-row justify-between items-center text-red-600">
-                        <input checked="checked" name="consent1" type="checkbox" value=1>
-                        <span>accept terms</span>
+                <div class="delay-1s animated fadeIn flex flex-col items-center justify-center w-full mb-5">
+                    <div class="checkbox-wrapper flex flex-row justify-between items-center text-setservices-green accept-terms">
+                        <input checked="checked" name="consent1" type="checkbox" value=1 class="mr-2 w-6 border-b-2">
+                        <label for="consent1">accept terms</label>
                     </div>
-                    <div class="checkbox-wrapper flex flex-row justify-between items-center text-red-600">
-                        <input checked="checked" name="consent2" type="checkbox" value=1>
-                        <span>email list</span>
+                    <div class="checkbox-wrapper flex flex-row justify-between items-center text-setservices-green">
+                        <input checked="checked" name="consent2" type="checkbox" value=1 class="mr-2 w-6">
+                        <label for="consent2">sign up to newsletter</label>
                     </div>
                 </div>
 
                 <!-- SUBMIT -->
-                <input class="leading-none tracking-3px outline-none rounded-lg transition-all-250ms hover:text-red-500 hover:bg-white shadow-md w-full h-20 tablet-landscape:h-16 p-5 text-1.5rem tablet-portrait:text-1.5rem bg-red-500 text-white uppercase roboto cursor-pointer"  type="submit" value="Submit">
+                <input class="delay-1s animated fadeIn leading-none tracking-3px outline-none rounded-lg transition-all-250ms hover:text-white hover:bg-setservices-green shadow-md w-full h-20 tablet-landscape:h-16 p-5 text-1.5rem tablet-portrait:text-1.5rem border border-setservices-green bg-white text-setservices-green uppercase roboto cursor-pointer"  type="submit" value="Submit">
 
             </form>
 
             <!-- COPYRIGHT -->
-            <div class="w-11/12 laptop:justify-end laptop:absolute laptop:bottom-0 laptop:right-0 laptop:m-10 laptop:w-auto laptop:px-10 laptop:py-5 z-20 my-5 shadow-lg rounded-lg p-5 bg-white text-red-500 flex flex-row justify-center items-center raleway">
+            <div class="animated fadeIn delay-1s text-setservices-blue w-11/12 laptop:justify-end laptop:absolute laptop:bottom-0 laptop:right-0 laptop:m-10 laptop:w-auto laptop:px-10 laptop:py-5 z-20 my-5 shadow-lg rounded-lg p-5 bg-white flex flex-row justify-center items-center raleway">
                 &copy; <span class="ml-1 text-1.25rem tracking-1px leading-none"> 2019 built - BerryNodes</span>
             </div>
 
+            <!-- OVERLAY -->
+            <div class="fixed top-0 left-0 z-50 hidden overlay flex flex-row justify-center items-center w-screen h-screen p-5 text-1rem leading-loose tracking-2px bg-setservices-blue text-white">
+                <div class="close-terms absolute top-0 right-0 m-10 h-12 w-12">x</div>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare molestie elit vitae semper. Nulla facilisi. Aliquam convallis et orci nec tincidunt. Suspendisse quis dui volutpat, mollis dui a, suscipit diam. Nullam sodales libero orci, mattis blandit felis fermentum in. Nam sollicitudin quam ligula, id sodales libero venenatis vel. Nullam sodales tellus vel sapien commodo hendrerit. In mollis rutrum purus, et tincidunt libero imperdiet vel. Nam id nisl ac lectus bibendum rutrum suscipit vitae nibh. Mauris quis ante non velit volutpat tempor in eget urna. Nam risus metus, accumsan vel dolor a, vehicula ultrices augue.
+
+            </div>
         </div>
         @include('scripts')
     </body>

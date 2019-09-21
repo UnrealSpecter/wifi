@@ -15,6 +15,8 @@ module.exports = {
 
       black: '#000',
       white: '#fff',
+      'setservices-green': '#16db85',
+      'setservices-blue': '#011b5c',
 
       gray: {
         100: '#f7fafc',
